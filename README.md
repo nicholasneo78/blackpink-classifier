@@ -1,12 +1,12 @@
 # Blackpink Classifier
 
-#### Aim: To build a Convolutional Neural Network (CNN) multi-classifier to classify images of kpop female group Blackpink members using keras.
+#### Aim: To build a Convolutional Neural Network (CNN) multi-classifier to classify the images of Blackpink members using keras.
 
 #### _Brief Introduction to Blackpink:_
 Blackpink is a 4-member female Korean pop band, consists of member Jisoo, Jennie, Rose and Lisa. This band debuted on 8th August 2016 under YG entertainment.
 
 #### _Task:_
-To classify the members of Blackpink as accurate as possible with their given labels (supervised learning).
+To classify the members of Blackpink accurately with their given labels (supervised learning).
 
 #### _This repository contains:_
   - File Structure of the initial setup
@@ -43,21 +43,21 @@ blackpink-classifier/
 - In total: ~2000 images x 4 members = ~8000 images
 
 #### _Main Files:_
-  - Blackpink Classification.ipynb
-        - x6 Data Augmentation of the images (1 original + 5 augmented for each image)
-        - Transfer learning: Loaded pre-trained model MobileNetV2
-	      - MobileNetV2 -> MAXPOOL -> Flatten -> Fully Connected 0 -> Dropout 20% -> Fully Connected 1
-	      - Accuracy:
-		          - Epochs: 20 | Batch Size: 32 | Train: 74.3% | Dev: 41.3% | Test: 42.5%
-  - Data Pre-processing for Multi Classifier.ipynb
-	      - Image Processing
-        - Train-dev-test split
-        - Resize Images
-        - Data Augmentation
-	      - Generate HDF5 Files    
-        - Convert to numpy data
-        - Generate H5 Data
-        - Check H5 Data
+- Blackpink Classification.ipynb
+	- x6 Data Augmentation of the images (1 original + 5 augmented for each image)
+	- Transfer learning: Loaded pre-trained model MobileNetV2
+	- MobileNetV2 -> MAXPOOL -> Flatten -> Fully Connected 0 -> Dropout 20% -> Fully Connected 1
+	- Accuracy:
+		- Epochs: 20 | Batch Size: 32 | Train: 74.3% | Dev: 41.3% | Test: 42.5%
+- Data Pre-processing for Multi Classifier.ipynb
+	- Image Processing
+		- Train-dev-test split
+		- Resize Images
+		- Data Augmentation
+	- Generate HDF5 Files    
+		- Convert to numpy data
+		- Generate H5 Data
+		- Check H5 Data
         
  #### _Approach Taken:_
 1. Scrape images to obtain your dataset
@@ -68,10 +68,10 @@ blackpink-classifier/
 6. Run Blackpink Classification.ipynb to obtain its accuracy
 
 #### _Why is the dev and test accuracy so low?_
-As the datasets are created by scraping images from search engines and then splitted randomly to train-dev-test set, there may be an issue of data mismatch, where the data in the train set comes from a different distribution from those that are in the dev set (eg different hair color, angle of images, background etc).
+As the datasets are created by scraping images from search engines and then splitted randomly to train-dev-test set, there may be an issue of data mismatch, where the data in the train set comes from a different distribution from those that are in the dev set (eg. same person with different hair color, angle of images, background etc).
 
 #### _Why is the train accuracy not within the 90% range?_
-This may be due to a high bias issue where the algorithm is underfitting the model.
+This might be due to a high bias issue where the algorithm is underfitting the model.
  
 #### _References:_
 - Andrew Ng's Deep Learning Specialisation: https://www.coursera.org/specializations/deep-learning
