@@ -1,2 +1,4 @@
+--- INSTRUCTIONS ---
+
 -- Insert images here according to the README.md file
 --.h5 files for the train/dev/test sets will be generated here after running the preprocessing ipynb file 
